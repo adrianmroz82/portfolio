@@ -11,6 +11,8 @@ import impactShop from "../../public/impact_shop_2.png";
 
 // TODO: review this
 export default function Page() {
+  const year = new Date().getFullYear();
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -106,7 +108,7 @@ export default function Page() {
 
       <footer className="border-t">
         <div className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6">
-          <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 John.dev. All rights reserved.</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">© {year} Adrian Mróz. All rights reserved.</p>
         </div>
       </footer>
     </div>
