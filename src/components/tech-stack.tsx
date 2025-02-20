@@ -3,7 +3,19 @@ import { Card } from "@/components/ui/card";
 const technologies: { category: string; skills: string[] }[] = [
   {
     category: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "CSS", "TailwindCSS", "Redux", "MaterialUI", "React Native"],
+    skills: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "CSS",
+      "TailwindCSS",
+      "Redux",
+      "MaterialUI",
+      "React Native",
+      "Webpack",
+      "Module Federation",
+      "Micro Frontends",
+    ],
   },
   {
     category: "Backend",
@@ -15,7 +27,11 @@ const technologies: { category: string; skills: string[] }[] = [
   },
   {
     category: "Testing",
-    skills: ["Jest", "React Testing Library", "Cypress", "Synthetic Tests"],
+    skills: ["Jest", "React Testing Library", "Cypress", "Synthetic Tests", "Integration Tests"],
+  },
+  {
+    category: "Tools",
+    skills: ["Figma", "GitHub", "Git Flow", "Insomnia", "Jira", "Scrum"],
   },
 ];
 
