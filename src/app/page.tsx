@@ -8,6 +8,10 @@ import Link from "next/link";
 import { Header } from "@/components/header";
 
 import impactShop from "../../public/impact_shop_2.png";
+import { BlurFade } from "@/components/blur-fade";
+import { BlurFadeText } from "@/components/blur-fade-text";
+
+const BLUR_FADE_DELAY = 0.04;
 
 // TODO: review this
 export default function Page() {
@@ -22,43 +26,68 @@ export default function Page() {
           <div className="w-full px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                {/* <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   Frontend Engineer
-                </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                </h1> */}
+                <BlurFadeText
+                  delay={BLUR_FADE_DELAY}
+                  className="text-3xl content-center font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                  yOffset={8}
+                  text={`Hi, I'm Adrian 👋`}
+                  animateByCharacter
+                />
+                <BlurFadeText
+                  delay={BLUR_FADE_DELAY + 0.2}
+                  className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400"
+                  yOffset={-4}
+                  text={`Frontend Engineer building digital experiences with modern technologies. `}
+                  // animateByCharacter
+                />
+                <BlurFadeText
+                  delay={BLUR_FADE_DELAY + 0.4}
+                  className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400"
+                  yOffset={0}
+                  text={`Focused on creating elegant solutions to complex problems.`}
+                  // animateByCharacter
+                />
+                {/* <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                   Building digital experiences with modern technologies. Focused on creating elegant solutions to
                   complex problems.
-                </p>
+                </p> */}
               </div>
-              <div className="space-x-4">
-                <Link href="https://github.com/adrianmroz82" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <FaGithubSquare className="h-4 w-4" />
-                    <span className="sr-only">GitHub</span>
-                  </Button>
-                </Link>
+              <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <div className="space-x-4">
+                  <Link href="https://github.com/adrianmroz82" target="_blank">
+                    <Button variant="outline" size="icon">
+                      <FaGithubSquare className="h-4 w-4" />
+                      <span className="sr-only">GitHub</span>
+                    </Button>
+                  </Link>
 
-                <Link href="https://linkedin.com" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <FaLinkedin className="h-4 w-4" />
-                    <span className="sr-only">LinkedIn</span>
-                  </Button>
-                </Link>
+                  <Link href="https://linkedin.com" target="_blank">
+                    <Button variant="outline" size="icon">
+                      <FaLinkedin className="h-4 w-4" />
+                      <span className="sr-only">LinkedIn</span>
+                    </Button>
+                  </Link>
 
-                <Link href="mailto:hello@example.com">
-                  <Button variant="outline" size="icon">
-                    <FaMailBulk className="h-4 w-4" />
-                    <span className="sr-only">Email</span>
-                  </Button>
-                </Link>
-              </div>
+                  <Link href="mailto:hello@example.com">
+                    <Button variant="outline" size="icon">
+                      <FaMailBulk className="h-4 w-4" />
+                      <span className="sr-only">Email</span>
+                    </Button>
+                  </Link>
+                </div>
+              </BlurFade>
             </div>
           </div>
         </section>
 
         <section id="projects" className="py-12 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">Projects</h2>
+            <BlurFade delay={BLUR_FADE_DELAY * 3}>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12">Projects</h2>
+            </BlurFade>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center">
               <ProjectCard
                 title="E-commerce Platform"
